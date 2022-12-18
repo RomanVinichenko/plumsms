@@ -77,3 +77,28 @@ h2 {
     }
   }
 }
+
+.base {
+  margin: 160px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 160px 20px;
+    border-radius: 24px;
+    background: #f8fbff;
+  }
+
+  &__content {
+    margin-right: 24px;
+    max-width: 384px;
+  }
+
+  h2 {
+    margin-bottom: 32px;
+    max-width: 350px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
