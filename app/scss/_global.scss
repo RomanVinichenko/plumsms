@@ -22,6 +22,73 @@ h2 {
   color: #09005d;
 }
 
+.rv-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  width: fit-content;
+  height: 84px;
+  border-radius: 24px;
+  background-color: #fff;
+
+  &__hero {
+    padding: 0 24px;
+    height: 52px;
+    background: linear-gradient(79.73deg, #18aff2 5.08%, #5e53d8 35.73%, #e74296 76.59%, #fd7642 107.24%);
+
+    span {
+      color: #fff !important;
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+  span {
+    display: block;
+    margin-right: 24px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #09005d;
+  }
+}
+
+.hero {
+  background-color: #edf2ff;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 100vh;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 40%;
+
+    h1 {
+      margin-bottom: 24px;
+      max-width: 486px;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 72px;
+      letter-spacing: -0.04em;
+      color: #09005d;
+    }
+
+    p {
+      margin-bottom: 32px;
+      max-width: 431px;
+    }
+  }
+}
+
 .partner {
   margin: 160px 0;
 
@@ -79,7 +146,7 @@ h2 {
 }
 
 .base {
-  margin: 160px 0;
+  margin: 160px 0 120px;
 
   &__wrapper {
     display: flex;
@@ -87,7 +154,7 @@ h2 {
     justify-content: center;
     padding: 160px 20px;
     border-radius: 24px;
-    background: #f8fbff;
+    background-color: #f8fbff;
   }
 
   &__content {
@@ -100,5 +167,31 @@ h2 {
     max-width: 350px;
     font-size: 40px;
     line-height: 48px;
+  }
+}
+
+.try {
+  margin: 120px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0;
+    border-radius: 40px;
+    background-image: linear-gradient(79.73deg, #18aff2 5.08%, #5e53d8 35.73%, #e74296 76.59%, #fd7642 107.24%);
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    color: #fff;
+  }
+
+  p {
+    margin-bottom: 24px;
+    max-width: 296px;
+    text-align: center;
+    color: #fff;
   }
 }
