@@ -58,6 +58,10 @@
   top: 0;
   padding: 10px 0;
   background-color: rgba(#f8fbff, 0.9);
+
+  .menu__social-block {
+    background-color: #edf2ff !important;
+  }
 }
 
 .menu__control {
@@ -93,7 +97,8 @@
         justify-content: center;
         width: 48px;
         height: 48px;
-        background-color: #edf2ff;
+        background-color: transparent;
+        transition: all 0.4s;
       }
 
       &:hover {

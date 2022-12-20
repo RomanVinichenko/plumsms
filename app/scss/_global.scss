@@ -1029,6 +1029,19 @@ h2 {
   }
 }
 
+.intro__img-wrap {
+  width: 100%;
+  max-width: 100%;
+
+  @include m($md) {
+    max-width: 70%;
+  }
+
+  @include m($sm) {
+    max-width: 90%;
+  }
+}
+
 .intro {
   display: flex;
   align-items: center;
@@ -1039,6 +1052,11 @@ h2 {
   max-width: 100%;
   max-height: 100vh;
 
+  .intro__img {
+    width: 100%;
+    max-width: 100%;
+  }
+
   h1 {
     margin-right: 41px;
     min-width: fit-content;
@@ -1046,7 +1064,19 @@ h2 {
     font-size: 72px;
     line-height: 72px;
     letter-spacing: -0.04em;
+    text-align: center;
     color: #09005d;
+
+    @include m($xl) {
+      margin-right: 20px;
+      font-size: 60px;
+      line-height: 72px;
+    }
+
+    @include m($lg) {
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 
   img {
@@ -1065,6 +1095,14 @@ h2 {
     img {
       margin: 0 auto;
     }
+
+    @include m($md) {
+      max-width: 300px;
+    }
+  }
+
+  @include m($md) {
+    flex-direction: column;
   }
 }
 
