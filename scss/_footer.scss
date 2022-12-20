@@ -2,12 +2,50 @@
   padding-top: 80px;
   background-color: #f8fbff;
 
+  .footer-logo {
+    @include m($xl) {
+      max-width: 350px;
+    }
+
+    @include m($lg) {
+      max-width: 300px;
+    }
+
+    @include m(890) {
+      max-width: 200px;
+    }
+
+    @include m(820) {
+      margin-bottom: 39px;
+      max-width: 100%;
+    }
+  }
+
+  .menu__control {
+    @include m(820) {
+      margin-bottom: 41px;
+    }
+  }
+
+  .menu__social-block {
+    background-color: transparent !important;
+  }
+
   &__main {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 82px;
     border-bottom: 1px solid rgba(#09005d, 0.12);
+
+    @include m($lg) {
+      padding-bottom: 50px;
+    }
+
+    @include m(820) {
+      flex-direction: column;
+      padding-bottom: 31px;
+    }
   }
 
   &__social {
@@ -41,6 +79,10 @@
       font-size: 14px;
       line-height: 20px;
       color: #09005d;
+
+      @include m(820) {
+        margin-bottom: 24px;
+      }
     }
 
     a {
@@ -89,11 +131,23 @@
           }
         }
       }
+
+      @include m(820) {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include m(820) {
+      flex-direction: column;
     }
   }
 
   &__copy-designed {
     display: flex;
+
+    p {
+      margin: 0 !important;
+    }
 
     a {
       margin-left: 8px;
@@ -101,5 +155,13 @@
       line-height: 20px;
       color: #09005d;
     }
+  }
+
+  @include m($lg) {
+    padding-top: 68px;
+  }
+
+  @include m($md) {
+    padding-top: 56px;
   }
 }
