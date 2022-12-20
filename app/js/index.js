@@ -24,3 +24,11 @@ window.addEventListener('scroll', function () {
     header.classList.remove("header--active");
   }
 });
+
+const burger = document.querySelector(".burger")
+const menuTel = document.querySelector(".menu__mobile")
+
+burger.addEventListener('click', function (){
+  menuTel.classList.toggle("menu__mobile--active")
+  burger.classList.toggle("menu__burger--close")
+})
