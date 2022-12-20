@@ -30,5 +30,5 @@ const menuTel = document.querySelector(".menu__mobile")
 
 burger.addEventListener('click', function (){
   menuTel.classList.toggle("menu__mobile--active")
-  burger.classList.toggle("menu__burger--close")
+  burger.classList.toggle("burger--active")
 })
