@@ -188,6 +188,7 @@ h2 {
       justify-content: center;
       margin: 0;
       height: 44px;
+      text-align: center;
       color: #fff !important;
     }
 
@@ -1077,6 +1078,11 @@ h2 {
       font-size: 40px;
       line-height: 48px;
     }
+
+    @include m($md) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   img {
@@ -1099,10 +1105,15 @@ h2 {
     @include m($md) {
       max-width: 300px;
     }
+
+    @include m($md) {
+      top: 15px;
+    }
   }
 
   @include m($md) {
     flex-direction: column;
+    padding-top: 50px;
   }
 }
 
