@@ -1,4 +1,4 @@
-$(".terms__nav a, .footer a").on("click", function () {
+$("a").on("click", function () {
 
   let href = $(this).attr("href");
 
