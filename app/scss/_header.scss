@@ -34,6 +34,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 20vh;
     width: 100%;
     height: 120vh;
     background-color: #edf2ff;
@@ -43,6 +44,30 @@
     .menu__social {
       margin-right: 0;
       margin-bottom: 32px;
+
+      li {
+        a {
+          width: 64px;
+          height: 64px;
+        }
+
+        + li {
+          margin-left: 16px;
+
+          @include m($sm) {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+
+    .menu__social-slime {
+      height: 128px !important;
+    }
+
+    .menu__social-block {
+      width: 64px !important;
+      height: 64px !important;
     }
   }
 }
@@ -52,15 +77,49 @@
 }
 
 .burger {
+  position: relative;
   z-index: 30;
   display: none;
   padding: 0;
+  width: 48px;
+  height: 48px;
   border: none;
   background-color: transparent;
   cursor: pointer;
 
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.2s;
+
+    &:first-of-type {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:last-of-type {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
   @include m(830) {
     display: block;
+  }
+}
+
+.burger--active {
+  img {
+    &:first-of-type {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:last-of-type {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
