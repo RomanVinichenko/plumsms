@@ -1,15 +1,63 @@
 .header {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 22px;
   z-index: 30;
+  transition: all 0.4s;
 
   .menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
+  .menu__social {
+    @include m(830) {
+      display: none;
+    }
+  }
+
+  .menu__control {
+    @include m(830) {
+      display: none;
+    }
+  }
+
+  @include m(830) {
+    top: 16px;
+  }
+}
+
+.burger {
+  display: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @include m(830) {
+    display: block;
+  }
+}
+
+.header-logo {
+  @include m($xl) {
+    max-width: 350px;
+  }
+
+  @include m($lg) {
+    max-width: 300px;
+  }
+
+  @include m($sm) {
+    max-width: 225px;
+  }
+}
+
+.header--active {
+  top: 0;
+  padding: 10px 0;
+  background-color: rgba(#f8fbff, 0.9);
 }
 
 .menu__control {
@@ -45,6 +93,7 @@
         justify-content: center;
         width: 48px;
         height: 48px;
+        background-color: #edf2ff;
       }
 
       &:hover {
