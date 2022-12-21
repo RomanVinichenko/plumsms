@@ -206,17 +206,21 @@ h2 {
   z-index: -1;
   display: none;
   margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
 
   img {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
+    max-width: 80%;
 
     @include m($sm) {
-      width: 100%;
+      max-width: 95%;
     }
   }
 
-  @include m($md) {
+  @include m(880) {
     display: block;
   }
 }
@@ -239,7 +243,7 @@ h2 {
     background-size: contain;
     background-repeat: no-repeat;
 
-    @include m($md) {
+    @include m(880) {
       display: none;
     }
   }
@@ -310,8 +314,9 @@ h2 {
       }
     }
 
-    @include m($md) {
-      bottom: 35px;
+    @include m(880) {
+      position: relative;
+      bottom: 0;
     }
   }
 
@@ -345,9 +350,12 @@ h2 {
         line-height: 62px;
       }
 
+      @include m(880) {
+        max-width: 100%;
+      }
+
       @include m($md) {
         margin-bottom: 16px;
-        max-width: 100%;
         font-size: 40px;
         line-height: 48px;
       }
@@ -357,9 +365,12 @@ h2 {
       margin-bottom: 32px;
       max-width: 431px;
 
+      @include m(880) {
+        max-width: 100%;
+      }
+
       @include m($md) {
         margin-bottom: 16px;
-        max-width: 100%;
       }
     }
 
@@ -367,13 +378,11 @@ h2 {
       max-width: 400px;
     }
 
-    @include m(840) {
-      max-width: 350px;
-    }
-
-    @include m($md) {
+    @include m(880) {
       justify-content: flex-start;
       padding-top: 90px;
+      padding-bottom: 20px;
+      height: fit-content;
       max-width: 100%;
     }
   }
@@ -863,8 +872,13 @@ h2 {
       img {
         bottom: -66px;
 
+        @include m($md) {
+          right: 10px;
+          bottom: -70px;
+        }
+
         @include m($sm) {
-          bottom: -100px;
+          bottom: -70px;
         }
       }
     }
@@ -874,7 +888,7 @@ h2 {
     }
 
     @include m($lg) {
-      min-height: 335px;
+      min-height: 350px;
     }
   }
 
@@ -1033,15 +1047,7 @@ h2 {
 
 .intro__img-wrap {
   width: 100%;
-  max-width: 100%;
-
-  @include m($md) {
-    max-width: 70%;
-  }
-
-  @include m($sm) {
-    max-width: 90%;
-  }
+  max-width: 690px;
 }
 
 .intro {
@@ -1055,12 +1061,13 @@ h2 {
   max-height: 100vh;
 
   .intro__img {
+    margin: 0 auto;
     width: 100%;
-    max-width: 100%;
+    max-width: 690px;
   }
 
   h1 {
-    margin-right: 41px;
+    margin-right: 10px;
     min-width: fit-content;
     font-weight: 500;
     font-size: 72px;
@@ -1070,19 +1077,20 @@ h2 {
     color: #09005d;
 
     @include m($xl) {
-      margin-right: 20px;
       font-size: 60px;
       line-height: 72px;
     }
 
     @include m($lg) {
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 50px;
+      line-height: 62px;
     }
 
-    @include m($md) {
+    @include m(880) {
       margin-right: 0;
       margin-bottom: 20px;
+      font-size: 40px;
+      line-height: 48px;
     }
   }
 
@@ -1112,7 +1120,7 @@ h2 {
     }
   }
 
-  @include m($md) {
+  @include m(880) {
     flex-direction: column;
     padding-top: 50px;
   }
